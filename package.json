@@ -1,0 +1,8 @@
+{
+  "name": "boilerplate__React-Node-SQL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iQuixotic/boilerplate__React-Node-SQL.git",
+  "author": "iQuixotic",
+  "license": "MIT"
+}

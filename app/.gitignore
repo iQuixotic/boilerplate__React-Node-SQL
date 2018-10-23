@@ -60,9 +60,8 @@ typings/
 # next.js build output
 .next
 
-
 # safe folder
-safe
+# safe
 private.js
 
 # config globals
