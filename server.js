@@ -1,17 +1,16 @@
-// external packages
+// required external packages
 const express = require('express');
 const path = require('path')
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 
-// database and app (internal)
+// database and app 
 // const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3001;
-// const connectMe = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/bank_db'; 
 const routes = require('./app/routes');
-console.log(process.env.MONGOLAB_URI)
+const insp = require('./sql/inspiration');
+const globals = require('./app/config/globals');
 
 // use morgan, bodyParser, cors, routes
 app.use(cors());
@@ -20,7 +19,7 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(routes);
 
-// connect to the database bank_db on the server
+// connect to the database 
 // mongoose.connect(connectMe, {useNewUrlParser: true});
 // mongoose.Promise = global.Promise;
 
@@ -30,8 +29,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // start server
-app.listen(PORT, () => {
-  console.log("Server listening on: http://localhost:" + PORT);
+app.listen(globals.PORT, () => {
+  console.log(insp.gen())
+  console.log("You know I'll always be there for you on port " + globals.PORT);
 });
  
 // - - - - - - - - - - - - - - - - - - 
