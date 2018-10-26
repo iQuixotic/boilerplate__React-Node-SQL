@@ -66,4 +66,4 @@ safe
 private.js
 
 # config globals
-config
+secret.js
