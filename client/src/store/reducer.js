@@ -1,5 +1,6 @@
 import * as actionTypes from './actions';
 
+
 const initialState = {
     message: 'The eternal message',
     numberOfSecrets: 4,

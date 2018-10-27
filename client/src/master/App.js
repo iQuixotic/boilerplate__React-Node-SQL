@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 class App extends Component {
   render() {
@@ -17,8 +17,9 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React Yapapapapa
           </a>
+          <h1>yes pa pa</h1>
         </header>
       </div>
     );

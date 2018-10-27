@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate__React-Node-SQL",
+  "name": "boilerplate__SERN",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "git@github.com:iQuixotic/boilerplate__React-Node-SQL.git",
+  "repository": "git@github.com:iQuixotic/boilerplate__SERN.git",
   "author": "iQuixotic",
   "license": "MIT",
   "scripts": {
@@ -20,6 +20,7 @@
     "express": "^4.16.4",
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-redux": "^5.1.0"
   }
 }

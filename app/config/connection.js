@@ -26,15 +26,22 @@ const secret = require('./secret');
 // module.exports = connection;
 
 
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
+let connection;
+
+// define connection
+if(process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: secret.DB_USER,
   password: secret.DB_PASSWORD,
   database: "example_db"
 });
+}
 
 // Make connection.
 connection.connect(function(err) {
