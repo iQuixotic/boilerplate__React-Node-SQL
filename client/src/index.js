@@ -1,12 +1,13 @@
+// external imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-
+// internal files
 import './master/normalize.css';
-import './master/main.css';
+import './master/base.css';
 import App from './master/App';
 import * as serviceWorker from './master/serviceWorker';
 import reducer from './store/reducer';
