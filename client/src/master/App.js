@@ -1,27 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-// import './App.css';
+import * as React from 'react';
 
-class App extends Component {
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+import { 
+  Main, ExCon
+} from '../containers';
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React Yapapapapa
-          </a>
-          <h1>yes pa pa</h1>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Route exact={true} path="/" component={Main} />
+          <Route exact={true} path="/" component={ExCon} />
+        </div>
+      </Router>
     );
   }
 }
