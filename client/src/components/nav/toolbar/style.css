@@ -1,0 +1,64 @@
+/* .toolbar {
+  border-bottom: 1px solid rgb(0, 255, 64);
+} */
+
+.toolbar_sticky {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid rgb(0, 255, 64);
+}
+
+.toolbar_logo {
+    padding-top: 5px;
+    font-size: 2.5rem;
+    width: 40%;
+}
+
+.toolbar_search {
+    width: 29%;
+    margin-top: 7px;
+}
+
+.toolbar_buttons {
+    margin-left: 5%;
+    display: flex;
+}
+
+.mag-glass {
+    display: flex;
+    filter: grayscale(100%);
+    filter: invert(65%);
+    margin: 5px 245px 0;
+    position: absolute;
+}
+
+.toolbar_bottom {
+    padding-top: 5px;
+    margin-top: 60px;
+    background-color: white;
+    border-bottom: 1px solid rgb(0, 255, 64);
+}
+
+@media only screen and (max-width: 995px) {
+    
+    .toolbar_nav {
+        margin-top: 62px;
+    }
+
+    .toolbar_nav a {
+        padding: 15px 15px 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .toolbar_nav {
+        width: 25%;
+    }
+}  
