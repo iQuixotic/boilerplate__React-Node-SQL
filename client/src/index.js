@@ -10,7 +10,7 @@ import './master/normalize.css';
 import './master/base.css';
 import App from './master/App';
 import * as serviceWorker from './master/serviceWorker';
-import reducer from './store/reducer';
+import reducer from './redux/reducers';
 
 const store = createStore(reducer);
 

@@ -4,6 +4,8 @@ import rootReducer from './redux/reducers';
 
 const middleware = [thunk];
 
+const initialState = {};
+
 const store = createStore(
     rootReducer,
     initialState, 

@@ -1,14 +1,19 @@
 import * as React from "react";
 import { DropDown, Panel } from "../../../components";
 import { Layout } from "../../../containers";
-import * as actionTypes from "../../../store/actions";
+// import * as actionTypes from "../../../store/actions";
 
+import { connect } from 'react-redux';
+import { fetchPosts } from '../../../redux/actions/postActions'
 
 import './style.css';
 
 class Main extends React.Component {
-    state = {
-        headLine: 'the best message ever'
+    // state = {
+    //     headLine: 'the best message ever'
+    // }
+    componentWillMount() {
+      this.props.fetchPosts();
     }
 
   render() {
@@ -52,17 +57,17 @@ class Main extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onPostAdded: (arg) => dispatch ({type: actionTypes.ADD_POST, postName: arg}),
-    onPostRemoved: (arg) => dispatch ({type: actionTypes.REMOVE_POST, postName: arg})
-  };
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     onPostAdded: (arg) => dispatch ({type: actionTypes.ADD_POST, postName: arg}),
+//     onPostRemoved: (arg) => dispatch ({type: actionTypes.REMOVE_POST, postName: arg})
+//   };
+// }
 
-const mapStateToProps = state => {
-  return {
-    pos: state.posts
-  };
-}
+// const mapStateToProps = state => {
+//   return {
+//     pos: state.posts
+//   };
+// }
 
-export default Main;
+export default connect(null, { fetchPosts }) (Main);
