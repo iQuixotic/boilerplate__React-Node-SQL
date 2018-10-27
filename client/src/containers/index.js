@@ -1,5 +1,5 @@
 // export * from hoc 
-export { default as Loader } from './HOC/loader/spinWheel';
+export { default as Loader } from './hoc/loader/spinWheel';
 
 // export * from resp
 export { default as Layout } from './resp/layout';

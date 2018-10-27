@@ -21,10 +21,10 @@ export { default as NavItems } from './nav/navItems/navItems';
 export { default as Toolbar } from './nav/toolbar/toolbar';
 
 // export * from UI
-export { default as ButtonNB } from './UI/button/buttonNB';
-export { default as ButtonS } from './UI/button/buttonSolid';
-export { default as Input } from './UI/input/input';
-export { default as DropDown } from './UI/dropdown/dropDown';
+export { default as ButtonNB } from './ui/button/buttonNB';
+export { default as ButtonS } from './ui/button/buttonSolid';
+export { default as Input } from './ui/input/input';
+export { default as DropDown } from './ui/dropdown/dropDown';
 
 // export * from visual
 export { default as Backdrop } from './visual/backdrop/backdrop';
