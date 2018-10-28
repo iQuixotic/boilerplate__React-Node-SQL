@@ -9,6 +9,7 @@ const initialState = {
 export default function(state = initialState, action) {
     switch (action.type) {
         case FETCH_POSTS:
+        console.log('bithc')
         return {
             ...state,
             items: action.payload

@@ -17,35 +17,16 @@ class Main extends React.Component {
     }
 
   render() {
+    const postItems = this.props.posts.map(post => (
+      <div key = {post.id}>
+        <h3>{post.title}</h3>
+        <p>{post.body}</p>
+      </div>
+    ))
     return (
       <Layout>
-        <Panel>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        </Panel>
-        {/* <Toolbar></Toolbar> */}
-       
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.state.headLine}</h1>
-        <h1>{this.props.pos}</h1>
-
-
+        
+        <h1>{postItems}</h1>
 
         <DropDown>
           <option>here</option>
@@ -64,10 +45,10 @@ class Main extends React.Component {
 //   };
 // }
 
-// const mapStateToProps = state => {
-//   return {
-//     pos: state.posts
-//   };
-// }
+const mapStateToProps = state => ({
+  // return {
+    posts: state.posts.items
+  // };
+});
 
-export default connect(null, { fetchPosts }) (Main);
+export default connect(mapStateToProps, { fetchPosts }) (Main);
